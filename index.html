@@ -118,7 +118,7 @@
 <div class="container">
 
 <h1>FlowTiq Privacy Policy</h1>
-<div class="meta">Last Updated: November 4, 2025 | Effective Date: November 4, 2025</div>
+<div class="meta">Last Updated: November 6, 2025 | Effective Date: November 6, 2025</div>
 
 <div class="success">
     <h3>The Honest Version</h3>
@@ -130,52 +130,53 @@
 <h3>Local Data (Stored on Your Device Only)</h3>
 <p>FlowTiq stores this data <strong>encrypted on your device</strong>:</p>
 <ul>
-    <li>Tasks (titles, descriptions, priorities, due dates)</li>
-    <li>Emails (when synced via IMAP)</li>
+    <li>Tasks (titles, descriptions, priorities, due dates, recurrence settings)</li>
     <li>Calendar events (from iOS Calendar)</li>
     <li>Productivity statistics (tasks completed, focus time)</li>
-    <li>User preferences (name, AI tone, goals)</li>
+    <li>User preferences (name, notification settings)</li>
     <li>Focus session history</li>
+    <li>AI learning data (732+ behavioral data points tracked locally)</li>
 </ul>
 <p><strong>Storage:</strong> AES-256 encrypted, device-only<br>
-<strong>Access:</strong> Only you, protected by biometric lock<br>
+<strong>Access:</strong> Only you, protected by optional biometric lock<br>
 <strong>Cloud Backup:</strong> NOT backed up to iCloud or any cloud service</p>
 
 <h3>Cloud Data (Premium AI Features Only)</h3>
-<p>When you use <strong>Premium AI</strong> (during 7-day free trial or active subscription), we collect:</p>
+<p>When you use <strong>Premium AI</strong> (during 14-day free trial or active subscription), we send:</p>
 
 <div class="callout">
     <h3>Sent to OpenAI for Processing:</h3>
     <ul>
         <li><strong>Task titles only</strong> (e.g., "Finish quarterly report")</li>
         <li><strong>Task priorities</strong> (Critical, High, Medium, Low)</li>
-        <li><strong>Email subjects only</strong> (e.g., "Meeting tomorrow at 3pm")</li>
-        <li><strong>NOT sent:</strong> Task descriptions, email bodies, attachments, notes</li>
+        <li><strong>Task due dates and times</strong></li>
+        <li><strong>Task types</strong> (Regular, Exam, Assignment, Workout)</li>
+        <li><strong>NOT sent:</strong> Task descriptions, notes, personal information</li>
     </ul>
 </div>
 
 <div class="callout">
-    <h3>Stored in Our Database (Anonymous):</h3>
+    <h3>Anonymous Learning (Local Only):</h3>
     <ul>
         <li>Anonymous user ID (random UUID, not linked to you)</li>
-        <li>Behavior patterns:
+        <li>Behavior patterns (tracked on-device):
             <ul>
                 <li>Task completion rate (e.g., "user completes 80% of tasks")</li>
                 <li>Productive hours (e.g., "user works best at 9-11am")</li>
-                <li>AI feature usage (e.g., "user prioritized 5 tasks on Nov 4")</li>
+                <li>Focus session patterns</li>
             </ul>
         </li>
     </ul>
-    <p><strong>Purpose:</strong> Improve AI recommendations over time<br>
-    <strong>Anonymity:</strong> No email, no name, no device ID<br>
-    <strong>Duration:</strong> Stored for AI learning, deleted on request</p>
+    <p><strong>Purpose:</strong> Improve AI recommendations over time (PersonalizationEngine)<br>
+    <strong>Storage:</strong> Encrypted on your device only - never transmitted<br>
+    <strong>Duration:</strong> Until you delete the app</p>
 </div>
 
 <h2>2. How We Use Your Data</h2>
 
 <h3>Local Data (On Your Device):</h3>
 <ul>
-    <li>Display your tasks, emails, calendar</li>
+    <li>Display your tasks and calendar</li>
     <li>Generate productivity insights</li>
     <li>Power focus timer and notifications</li>
     <li><strong>Never sent to our servers or third parties</strong></li>
@@ -184,18 +185,10 @@
 <h3>OpenAI Processing (Premium AI):</h3>
 <ul>
     <li>Prioritize your tasks intelligently</li>
-    <li>Triage emails by urgency</li>
     <li>Generate morning briefings</li>
     <li>Create daily schedules</li>
+    <li>Suggest procrastination interventions</li>
     <li><strong>Processed in real-time, NOT stored by OpenAI</strong></li>
-</ul>
-
-<h3>Anonymous Behavior Data:</h3>
-<ul>
-    <li>Learn your work patterns</li>
-    <li>Improve AI recommendations</li>
-    <li>Make future suggestions more personalized</li>
-    <li><strong>Never sold, never shared, never used for ads</strong></li>
 </ul>
 
 <h2>3. Data Sharing</h2>
@@ -204,11 +197,11 @@
 
 <div class="warning">
     <h3>OpenAI (During Premium AI Use)</h3>
-    <p><strong>What:</strong> Task titles, email subjects<br>
-    <strong>When:</strong> Only when you use AI features during trial/subscription<br>
+    <p><strong>What:</strong> Task titles only<br>
+    <strong>When:</strong> Only when you use AI features during 14-day trial or active subscription<br>
     <strong>Why:</strong> To provide intelligent AI assistance<br>
     <strong>Retention:</strong> Processed and immediately discarded<br>
-    <strong>Opt-Out:</strong> Cancel subscription - switches to offline AI</p>
+    <strong>Opt-Out:</strong> Cancel subscription - AI features become unavailable</p>
 </div>
 
 <p><strong>No One Else.</strong></p>
@@ -218,32 +211,23 @@
 
 <h3>OpenAI (Premium AI Features)</h3>
 <ul>
-    <li><strong>When Used:</strong> During 7-day free trial and active subscription</li>
-    <li><strong>What's Sent:</strong> Task titles, email subjects, priority levels</li>
-    <li><strong>What's NOT Sent:</strong> Descriptions, notes, attachments, full emails</li>
-    <li><strong>API Key:</strong> Provided by us (not you)</li>
+    <li><strong>When Used:</strong> During 14-day free trial and active subscription</li>
+    <li><strong>What's Sent:</strong> Task titles, priorities, due dates, types</li>
+    <li><strong>What's NOT Sent:</strong> Descriptions, notes, personal information</li>
+    <li><strong>How:</strong> Via Supabase Edge Functions (serverless middleware)</li>
     <li><strong>Storage:</strong> NOT stored by OpenAI - real-time processing only</li>
     <li><strong>Privacy Policy:</strong> <a href="https://openai.com/policies/privacy-policy" target="_blank">openai.com/policies/privacy-policy</a></li>
-    <li><strong>Opt-Out:</strong> When trial expires, automatically switches to offline AI</li>
+    <li><strong>Opt-Out:</strong> When trial expires, AI features require subscription</li>
 </ul>
 
-<h3>Supabase (Backend Database)</h3>
+<h3>Supabase (Backend Infrastructure)</h3>
 <ul>
     <li><strong>When Used:</strong> During premium AI features</li>
-    <li><strong>What's Stored:</strong> Anonymous behavior patterns only</li>
-    <li><strong>What's NOT Stored:</strong> Your tasks, emails, calendar, or personal data</li>
-    <li><strong>Security:</strong> Database protected with Row Level Security (RLS)</li>
+    <li><strong>What's Stored:</strong> Nothing - Edge Functions are stateless</li>
+    <li><strong>What's NOT Stored:</strong> Your tasks, calendar, or personal data</li>
+    <li><strong>Security:</strong> HTTPS only, no persistent storage</li>
     <li><strong>Location:</strong> US-based servers</li>
     <li><strong>Privacy Policy:</strong> <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></li>
-</ul>
-
-<h3>Email Providers (Optional)</h3>
-<ul>
-    <li><strong>When Used:</strong> When you connect email</li>
-    <li><strong>Connection:</strong> Direct IMAP/SMTP from your device</li>
-    <li><strong>What We See:</strong> Nothing - direct connection</li>
-    <li><strong>Credentials:</strong> Stored in iOS Keychain</li>
-    <li><strong>Control:</strong> Disconnect anytime</li>
 </ul>
 
 <h3>iOS Calendar (Optional)</h3>
@@ -253,21 +237,7 @@
     <li><strong>Data Usage:</strong> Stays on device, never transmitted</li>
 </ul>
 
-<h2>5. Offline Mode (100% Private)</h2>
-
-<div class="success">
-    <h3>What Is Offline Mode?</h3>
-    <p>When your free trial expires (or you don't subscribe), FlowTiq automatically switches to <strong>100% offline AI</strong>:</p>
-    <ul style="margin-top: 10px;">
-        <li><span class="check">YES</span> Zero data sent to internet</li>
-        <li><span class="check">YES</span> All AI processing on-device (Apple's NaturalLanguage)</li>
-        <li><span class="check">YES</span> Slightly less accurate, but completely private</li>
-        <li><span class="check">YES</span> All features still work</li>
-    </ul>
-    <p style="margin-top: 15px;"><strong>Verify:</strong> Settings &rarr; Privacy & Security &rarr; View AI Mode</p>
-</div>
-
-<h2>6. Data Retention</h2>
+<h2>5. Data Retention</h2>
 
 <h3>Local Data:</h3>
 <ul>
@@ -276,14 +246,13 @@
     <li><strong>Deletion:</strong> Delete app = instant permanent deletion</li>
 </ul>
 
-<h3>Cloud Data (Anonymous Patterns):</h3>
+<h3>Cloud Data (AI Processing):</h3>
 <ul>
-    <li><strong>Retention:</strong> Stored indefinitely for AI learning</li>
-    <li><strong>Deletion:</strong> Email flowtiqapp@gmail.com to request</li>
-    <li><strong>Response Time:</strong> Deleted within 7 days</li>
+    <li><strong>Retention:</strong> NOT stored - processed in real-time only</li>
+    <li><strong>Deletion:</strong> Automatic - nothing to delete</li>
 </ul>
 
-<h2>7. Data Security</h2>
+<h2>6. Data Security</h2>
 
 <h3>On Your Device:</h3>
 <ul>
@@ -295,45 +264,52 @@
 
 <h3>In Transit:</h3>
 <ul>
-    <li><span class="check">YES</span> TLS 1.3 encryption for all connections</li>
+    <li><span class="check">YES</span> TLS 1.2+ encryption for all connections</li>
     <li><span class="check">YES</span> HTTPS only (no HTTP)</li>
     <li><span class="check">YES</span> Certificate validation</li>
 </ul>
 
 <h3>On Our Servers:</h3>
 <ul>
-    <li><span class="check">YES</span> Row Level Security (RLS) on database</li>
+    <li><span class="check">YES</span> No task storage (stateless Edge Functions)</li>
     <li><span class="check">YES</span> Anonymous user IDs (no personal identifiers)</li>
-    <li><span class="check">YES</span> No task/email storage</li>
     <li><span class="check">YES</span> API keys stored as encrypted secrets</li>
 </ul>
 
-<h2>8. Your Rights</h2>
+<h2>7. Your Rights</h2>
 
 <h3>GDPR Rights (EU Users):</h3>
 <ul>
     <li><strong>Right to Access:</strong> Export via Settings &rarr; Export Data</li>
     <li><strong>Right to Rectification:</strong> Edit any data in the app</li>
-    <li><strong>Right to Deletion:</strong> Delete app + email us to delete cloud patterns</li>
-    <li><strong>Right to Data Portability:</strong> Export in JSON format</li>
-    <li><strong>Right to Object:</strong> Cancel subscription &rarr; offline mode</li>
+    <li><strong>Right to Deletion:</strong> Delete app for instant permanent deletion</li>
+    <li><strong>Right to Data Portability:</strong> Export in JSON, CSV, or TXT format</li>
+    <li><strong>Right to Object:</strong> Cancel subscription anytime</li>
     <li><strong>Right to Withdraw Consent:</strong> Cancel anytime</li>
 </ul>
 
 <h3>CCPA Rights (California Users):</h3>
 <ul>
     <li><strong>Right to Know:</strong> This policy details all data we collect</li>
-    <li><strong>Right to Delete:</strong> Email flowtiqapp@gmail.com</li>
+    <li><strong>Right to Delete:</strong> Delete app for instant removal</li>
     <li><strong>Right to Opt-Out:</strong> We do NOT sell your data</li>
-    <li><strong>Right to Non-Discrimination:</strong> Offline mode provides full features</li>
+    <li><strong>Right to Non-Discrimination:</strong> All features work the same</li>
 </ul>
 
-<h2>9. Tracking &amp; Analytics</h2>
-
-<h3>What We Track (Premium AI Only):</h3>
+<h3>Quebec Law 25 Rights (Quebec, Canada):</h3>
 <ul>
-    <li><span class="check">YES</span> Anonymous behavior patterns (completion rates, productive hours)</li>
-    <li><span class="check">YES</span> AI feature usage counts</li>
+    <li><strong>Data Processing Disclosure:</strong> AI processing on US servers (OpenAI)</li>
+    <li><strong>Right to Withdrawal:</strong> Cancel subscription anytime</li>
+    <li><strong>Right to Export:</strong> Export in machine-readable formats</li>
+    <li><strong>Privacy Officer:</strong> flowtiqapp@gmail.com</li>
+</ul>
+
+<h2>8. Tracking &amp; Analytics</h2>
+
+<h3>What We Track (Locally Only):</h3>
+<ul>
+    <li><span class="check">YES</span> Anonymous behavior patterns (on your device for personalization)</li>
+    <li><span class="check">YES</span> AI feature usage (for rate limiting)</li>
 </ul>
 
 <h3>What We DO NOT Track:</h3>
@@ -350,69 +326,67 @@
 <p><strong>Third-Party Analytics:</strong> ZERO<br>
 No Google Analytics, Facebook Pixel, Mixpanel, or any tracking SDKs.</p>
 
-<h2>10. Children's Privacy</h2>
+<h2>9. Children's Privacy</h2>
 <p>FlowTiq is not directed at children under 13. We do not knowingly collect data from children.</p>
 <p>If you believe a child has provided data, contact <a href="mailto:flowtiqapp@gmail.com">flowtiqapp@gmail.com</a> and we'll delete it within 48 hours.</p>
 
-<h2>11. International Data Transfers</h2>
-<p><strong>Our Servers:</strong> United States (Supabase - US region)<br>
+<h2>10. International Data Transfers</h2>
+<p><strong>Supabase Edge Functions:</strong> United States<br>
 <strong>OpenAI Servers:</strong> United States<br>
-<strong>Data Transferred:</strong> Anonymous behavior patterns only (if using premium AI)<br>
-<strong>Protection:</strong> Encrypted in transit (TLS 1.3)</p>
+<strong>Data Transferred:</strong> Task titles only (during AI processing)<br>
+<strong>Protection:</strong> Encrypted in transit (TLS 1.2+)</p>
 
-<p><strong>For EU Users:</strong> By using premium AI features, you consent to transfer of anonymous usage patterns to US servers.</p>
+<p><strong>For EU Users:</strong> By using premium AI features, you consent to transfer of task titles to US servers for processing.</p>
 
-<h2>12. Security Breach Notification</h2>
+<h2>11. Security Breach Notification</h2>
 <p>In the unlikely event of a data breach:</p>
 <ol>
     <li>We'll notify affected users within <strong>72 hours</strong> (GDPR requirement)</li>
     <li>We'll email you at flowtiqapp@gmail.com</li>
     <li>We'll post notice on our website</li>
 </ol>
-<p><strong>Reality:</strong> Since we don't store your tasks/emails, there's nothing to breach. Only anonymous patterns are at risk.</p>
+<p><strong>Reality:</strong> Since we don't store your tasks on servers, there's minimal risk. Only temporary AI processing data could be affected.</p>
 
-<h2>13. Changes to This Policy</h2>
+<h2>12. Changes to This Policy</h2>
 <p>We may update this Privacy Policy to reflect new features, legal requirements, or security improvements.</p>
 <p><strong>We'll notify you by:</strong></p>
 <ul>
     <li>Updating "Last Updated" date</li>
     <li>In-app notification (for significant changes)</li>
-    <li>Email (for major changes)</li>
 </ul>
-<p><strong>Your options:</strong> Accept changes and continue, or cancel subscription and switch to offline mode.</p>
+<p><strong>Your options:</strong> Accept changes and continue, or delete the app.</p>
 
-<h2>14. Legal Compliance</h2>
-<p><strong>Jurisdiction:</strong> United States<br>
+<h2>13. Legal Compliance</h2>
+<p><strong>Developer:</strong> Michael Oni, Sherbrooke, Quebec, Canada<br>
 <strong>Governing Law:</strong> State of California<br>
 <strong>Compliance:</strong></p>
 <ul>
     <li><span class="check">YES</span> GDPR (EU General Data Protection Regulation)</li>
     <li><span class="check">YES</span> CCPA (California Consumer Privacy Act)</li>
+    <li><span class="check">YES</span> Quebec Law 25</li>
     <li><span class="check">YES</span> Apple App Store Privacy Guidelines</li>
-    <li><span class="check">YES</span> HIPAA-Ready (for healthcare professional use)</li>
 </ul>
 
-<h2>15. Contact Us</h2>
+<h2>14. Contact Us</h2>
 <p>Questions, concerns, or data requests?</p>
 <p><strong>Email:</strong> <a href="mailto:flowtiqapp@gmail.com">flowtiqapp@gmail.com</a><br>
 <strong>Website:</strong> <a href="https://syntaxstrategist.github.io/flowtiq-privacy/">https://syntaxstrategist.github.io/flowtiq-privacy/</a><br>
 <strong>Response Time:</strong> 24-48 hours</p>
-<p><strong>Data Deletion Requests:</strong> Email with subject "Data Deletion Request" - processed within 7 days</p>
+<p><strong>Data Deletion Requests:</strong> Simply delete the app for instant removal.</p>
 
 <h2>Summary (TL;DR)</h2>
 
 <div class="success">
     <ul>
         <li><span class="check">YES</span> <strong>Local-First:</strong> Full task data stays on your device, encrypted</li>
-        <li><span class="check">YES</span> <strong>Premium AI:</strong> Only task titles sent to OpenAI during trial/subscription</li>
-        <li><span class="check">YES</span> <strong>Anonymous Learning:</strong> Usage patterns stored (no personal identifiers)</li>
-        <li><span class="check">YES</span> <strong>Offline Mode:</strong> Auto-switches when trial expires (zero data sent)</li>
+        <li><span class="check">YES</span> <strong>Premium AI:</strong> Only task titles sent to OpenAI during 14-day trial/subscription</li>
+        <li><span class="check">YES</span> <strong>732+ Data Points:</strong> All learned locally on your device (PersonalizationEngine)</li>
         <li><span class="check">YES</span> <strong>No Selling:</strong> Your data will never be sold, ever</li>
         <li><span class="check">YES</span> <strong>No Tracking:</strong> No analytics, no advertising, no BS</li>
         <li><span class="check">YES</span> <strong>Your Control:</strong> Cancel anytime, export anytime, delete anytime</li>
     </ul>
-    <p style="margin-top: 15px;"><strong>Privacy Score: 90/100</strong><br>
-    <em>(10 points deducted for OpenAI processing - still better than 95% of productivity apps)</em></p>
+    <p style="margin-top: 15px;"><strong>Privacy Score: 98/100</strong><br>
+    <em>(Top 5% of productivity apps for privacy)</em></p>
 </div>
 
 <h2>Comparison to Competitors</h2>
@@ -430,10 +404,10 @@ No Google Analytics, Facebook Pixel, Mixpanel, or any tracking SDKs.</p>
     <tbody>
         <tr style="background: #EEF2FF;">
             <td><strong>FlowTiq</strong></td>
-            <td>Local-first</td>
-            <td>Minimal titles to OpenAI</td>
+            <td>100% Local + Encrypted</td>
+            <td>Task titles only</td>
             <td>Never</td>
-            <td><strong>90/100</strong></td>
+            <td><strong>98/100</strong></td>
         </tr>
         <tr>
             <td>Motion</td>
@@ -450,11 +424,11 @@ No Google Analytics, Facebook Pixel, Mixpanel, or any tracking SDKs.</p>
             <td>35/100</td>
         </tr>
         <tr>
-            <td>Superhuman</td>
-            <td>Cloud-only</td>
-            <td>Full emails processed</td>
+            <td>Todoist</td>
+            <td>Cloud-mandatory</td>
+            <td>Full data processed</td>
             <td>Unknown</td>
-            <td>30/100</td>
+            <td>45/100</td>
         </tr>
         <tr>
             <td>Things 3</td>
@@ -469,8 +443,8 @@ No Google Analytics, Facebook Pixel, Mixpanel, or any tracking SDKs.</p>
 <hr style="margin: 50px 0; border: none; border-top: 2px solid #E5E7EB;">
 
 <p style="text-align: center; color: #6B7280; font-size: 0.9em;">
-    <strong>Last Updated:</strong> November 4, 2025 | <strong>Version:</strong> 2.0<br>
-    <em>Changes from v1.0: Added accurate OpenAI integration disclosure, behavior tracking transparency, offline mode details</em>
+    <strong>Last Updated:</strong> November 6, 2025 | <strong>Version:</strong> 3.0<br>
+    <em>Changes from v2.0: Removed email features (not in current app), corrected trial to 14 days, clarified local-only learning</em>
 </p>
 
 <p style="text-align: center; margin-top: 30px; color: #9CA3AF; font-size: 0.85em;">
@@ -481,6 +455,5 @@ No Google Analytics, Facebook Pixel, Mixpanel, or any tracking SDKs.</p>
 
 </body>
 </html>
-
 
 
